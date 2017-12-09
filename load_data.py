@@ -79,7 +79,7 @@ def transform_data():
     }
 
     y = '_ds_crop'
-    image_datasets = {x: datasets.ImageFolder(os.path.join(dataset_dir, x),
+    image_datasets = {x: datasets.ImageFolder(os.path.join(dataset_dir, x+y),
                                               data_transforms[x])
                       for x in ['train', 'val']}
 
